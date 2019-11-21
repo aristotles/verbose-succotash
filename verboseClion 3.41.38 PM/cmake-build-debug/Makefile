@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/samuel/Desktop/vbLion
+CMAKE_SOURCE_DIR = "/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/samuel/Desktop/vbLion/cmake-build-debug
+CMAKE_BINARY_DIR = "/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/samuel/Desktop/vbLion/cmake-build-debug/CMakeFiles /Users/samuel/Desktop/vbLion/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug/CMakeFiles" "/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/samuel/Desktop/vbLion/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vbLion
+# Target rules for targets named untitled
 
 # Build rule for target.
-vbLion: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vbLion
-.PHONY : vbLion
+untitled: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 untitled
+.PHONY : untitled
 
 # fast build rule for target.
-vbLion/fast:
-	$(MAKE) -f CMakeFiles/vbLion.dir/build.make CMakeFiles/vbLion.dir/build
-.PHONY : vbLion/fast
+untitled/fast:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
+.PHONY : untitled/fast
 
-library.o: library.c.o
+main.o: main.c.o
 
-.PHONY : library.o
+.PHONY : main.o
 
 # target to build an object file
-library.c.o:
-	$(MAKE) -f CMakeFiles/vbLion.dir/build.make CMakeFiles/vbLion.dir/library.c.o
-.PHONY : library.c.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.o
+.PHONY : main.c.o
 
-library.i: library.c.i
+main.i: main.c.i
 
-.PHONY : library.i
+.PHONY : main.i
 
 # target to preprocess a source file
-library.c.i:
-	$(MAKE) -f CMakeFiles/vbLion.dir/build.make CMakeFiles/vbLion.dir/library.c.i
-.PHONY : library.c.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.i
+.PHONY : main.c.i
 
-library.s: library.c.s
+main.s: main.c.s
 
-.PHONY : library.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-library.c.s:
-	$(MAKE) -f CMakeFiles/vbLion.dir/build.make CMakeFiles/vbLion.dir/library.c.s
-.PHONY : library.c.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:
@@ -158,10 +158,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... vbLion"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
+	@echo "... untitled"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
