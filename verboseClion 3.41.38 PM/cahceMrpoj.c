@@ -71,3 +71,49 @@ int main(int argc, char *argv[]) {
         }
     }
 }
+
+#include <stdio.h>
+
+int main() {
+    printf("Nasus\n");
+    // create a FILE typed pointer
+    FILE *file_pointer;
+    char str[] ="";
+    scanf("%s", str);
+    printf("Nasus\n");
+    char str[] ="";
+    scanf("%s", newstr);
+
+    file_pointer = fopen(str, "w");
+//GET SUBSTRING
+    // Write to the file
+    fprintf(file_pointer, newstr);
+    // Close the file
+    fclose(file_pointer);
+
+
+    return 0;
+}
+#include <stdio.h>
+#include <string.h>
+int main() {
+    printf("Nasus\n");
+    // create a FILE typed pointer
+    ;
+    char str[10] ;
+    scanf("%s", str);
+
+    printf("Naseeus\n");
+    char newstr[500] ;
+    scanf("%s", newstr);
+
+    FILE *file_pointer = fopen(str, "w");
+//GET SUBSTRING
+    // Write to the file
+    fprintf(file_pointer, newstr);
+    // Close the file
+    fclose(file_pointer);
+
+
+    return 0;
+}
