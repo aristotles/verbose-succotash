@@ -1,3 +1,0 @@
-/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/cmake-build-debug/CMakeFiles/untitled.dir

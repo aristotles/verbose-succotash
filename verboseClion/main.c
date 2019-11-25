@@ -62,6 +62,9 @@ int main() {
 
         c++;
     }
+    char finalName[1024] = "";
+    char finalDesitination[1024] = "Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/";
+    strcpy(finalName, name);
     printf("we want to: %s\n",action);
     printf("a file called: %s\n",name);
     printf("number of partitions: %d\n",partition);
@@ -77,12 +80,33 @@ int main() {
         int i;
 
 
+        char contents[1024] = "";
+        char finalContents[1024] = "";
+
+        char *contentstring = inputContents;
+        char *w = contentstring;
+
 
         for (i=0; i<partition; i++)
         {
             size_t length = strlen(name);
 
-            //STOPPED HERE
+            while (*w)
+            {
+                if(strchr(invalid_characters, *w)){
+                    w++;
+                    break;
+                }
+                else{
+                    size_t len = strlen(contents);
+                    contents[len++] = *w; /* we overwriting the null-character with another one */
+                    contents[len] = '\0';
+                    w++;
+
+                }
+
+            }
+
             if(i==0){
 
                 name[length-4] = i +'0';
@@ -100,15 +124,25 @@ int main() {
             }
 
             FILE *file_pointer = fopen(name, "w");
-            fprintf(file_pointer, inputContents);//STOPED HERE CHANGING FILES CONTENTS
+            fprintf(file_pointer, contents);
             fclose(file_pointer);
+            //STOOPPPED HERE
+//            int improved= i+1;
+//            char place= improved+'0';
+//            strcat(finalContents, i+'0');
+            strcat(finalContents, ":");
+            strcat(finalContents, finalDesitination);
+            strcat(finalContents, name);
+            strcat(finalContents, "\n");
+
+            memset(contents,0,1024);
         }
-
-
-
-
+        FILE *file_pointer = fopen(finalName, "w");
+        fprintf(file_pointer, finalContents);//STOPED HERE CHANGING FILES CONTENTS
+        fclose(file_pointer);
     }
 
     printf("\ndone.\n");
     return 0;
+
 }

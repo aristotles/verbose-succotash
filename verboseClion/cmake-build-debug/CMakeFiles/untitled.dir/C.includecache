@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/samuel/GitHub/verbose-succotash/verboseClion 3.41.38 PM/main.c
+/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c
 stdio.h
 -
 string.h
