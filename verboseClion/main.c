@@ -65,13 +65,13 @@ int main() {
     char finalName[1024] = "";
     char finalDesitination[1024] = "Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/";
     strcpy(finalName, name);
-    printf("we want to: %s\n",action);
-    printf("a file called: %s\n",name);
-    printf("number of partitions: %d\n",partition);
+//    printf("we want to: %s\n",action);
+//    printf("a file called: %s\n",name);
+//    printf("number of partitions: %d\n",partition);
     if(strcmp(action, "create")==0){
         printf("\nwhat should the file say:\n");
-        char inputContents [50] ;
-        fgets(inputContents, 22, stdin);
+        char inputContents [1024] ;
+        fgets(inputContents, 1024, stdin);
 
         //gets rid of question mark
         size_t length = strlen(name);
@@ -82,6 +82,7 @@ int main() {
 
         char contents[1024] = "";
         char finalContents[1024] = "";
+        char placeString[1024] = "";
 
         char *contentstring = inputContents;
         char *w = contentstring;
@@ -122,27 +123,65 @@ int main() {
                 name[length-2] = 'x';
                 name[length-1] = 't';
             }
-
+            placeString[0] = i+1 +'0';
             FILE *file_pointer = fopen(name, "w");
             fprintf(file_pointer, contents);
             fclose(file_pointer);
             //STOOPPPED HERE
 //            int improved= i+1;
 //            char place= improved+'0';
-//            strcat(finalContents, i+'0');
+            strcat(finalContents, placeString);
             strcat(finalContents, ":");
             strcat(finalContents, finalDesitination);
             strcat(finalContents, name);
             strcat(finalContents, "\n");
-
+            memset(placeString,0,1024);
             memset(contents,0,1024);
         }
         FILE *file_pointer = fopen(finalName, "w");
         fprintf(file_pointer, finalContents);//STOPED HERE CHANGING FILES CONTENTS
         fclose(file_pointer);
     }
+    if(strcmp(action, "read")==0){
 
-    printf("\ndone.\n");
+        int q;
+        FILE *file;
+        char partitionFile[1024] = "";
+        file = fopen(name, "r");
+        if (file) {
+            while ((q = getc(file)) != EOF){
+                if(q=='\n'){
+
+                    int z;
+                    FILE *newfile;
+                    newfile = fopen(partitionFile, "r");
+                    if (newfile) {
+                        while ((z = getc(newfile)) != EOF)
+                            putchar(z);
+                        fclose(newfile);
+                    }
+                    printf(" ");
+                    memset(partitionFile,0,1024);
+
+                }
+                else{
+                    partitionFile[strlen(partitionFile)]=q;
+                }
+
+            }
+
+            fclose(file);
+        }
+
+
+
+
+
+
+
+    }
+
+ //   printf("\ndone.\n");
     return 0;
 
 }
