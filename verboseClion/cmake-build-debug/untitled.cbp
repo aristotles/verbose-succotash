@@ -81,6 +81,12 @@
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

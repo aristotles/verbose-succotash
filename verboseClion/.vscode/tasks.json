@@ -1,0 +1,44 @@
+{
+    "tasks": [
+        {
+            "label": "gcc build and debug active file",
+            "type": "shell",
+            "command": "gcc ${file} -o ${fileBasenameNoExtension}  && ./${fileBasenameNoExtension} ",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "compile and run C",
+            "type": "shell",
+            "command": "gcc ${file} -o ${fileBasenameNoExtension}  && ./${fileBasenameNoExtension} ",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "gcc build active file",
+            "type": "shell",
+            "command": "gcc ${file} -o ${fileBasenameNoExtension}  && ./${fileBasenameNoExtension} ",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+  }

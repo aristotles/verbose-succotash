@@ -1,0 +1,47 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "compile and run C",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "gcc build active file"
+        }, {
+            "name": "gcc build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "gcc build active file"
+        },
+        {
+            "name": "gcc build active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "gcc build active file"
+        }
+    ]
+}

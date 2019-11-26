@@ -1,2 +1,2 @@
-1:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/fire0.txt
-2:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/fire1.txt
+1:fire1.txt
+2:fire2.txt

@@ -150,6 +150,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/main.c.s
 .PHONY : main.c.s
 
+readAll.o: readAll.c.o
+
+.PHONY : readAll.o
+
+# target to build an object file
+readAll.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readAll.c.o
+.PHONY : readAll.c.o
+
+readAll.i: readAll.c.i
+
+.PHONY : readAll.i
+
+# target to preprocess a source file
+readAll.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readAll.c.i
+.PHONY : readAll.c.i
+
+readAll.s: readAll.c.s
+
+.PHONY : readAll.s
+
+# target to generate assembly for a file
+readAll.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readAll.c.s
+.PHONY : readAll.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... readAll.o"
+	@echo "... readAll.i"
+	@echo "... readAll.s"
 .PHONY : help
 
 
