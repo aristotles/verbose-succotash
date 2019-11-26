@@ -5,5 +5,5 @@
 #include <string.h>
 #ifndef UNTITLED_READALL_H
 #define UNTITLED_READALL_H
-int readAll();
+int readAll(char *var1, int var2);
 #endif //UNTITLED_READALL_H

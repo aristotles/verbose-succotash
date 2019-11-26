@@ -5,16 +5,23 @@
 #include <string.h>
 #include "readAll.h"
 
-int readAll(){
-
-
-        if(0==0){
-//        name[strlen(name)-1] = '\0';
+int readAll(char *var1, int var2){
+    char thename[1024]="";
+    int place=0;
+    for(int x=0; x<var2; x++)
+    {
+        thename[x]=*var1;
+        /*increment pointer for next element fetch*/
+        var1++;
+        place++;
+    }
+    thename[strlen(thename)-1] = 0;
 
             int q;
             FILE *file;
             char partitionFile[1024] = "";
-            file = fopen("cat.txt", "r");
+
+            file = fopen(thename, "r");
             int begining=0;
             int starter=0;
             int arrayDimensionPlace=0;
@@ -100,35 +107,9 @@ int readAll(){
                     }
 
                 }
-
                 printf("%s",mastOut);
-
-
-
-
-
-
-
-
-
-
-//            for(printLoop=0;printLoop<arrayDimensionPlace;printLoop++){
-//                size_t arrayLen = strlen(mainArray[printLoop]);
-//                int x;
-//                for(x=0;x<arrayLen;x++){
-//
-//                }
-//
-//
-//            }
-
 
                 fclose(file);
             }
-
-
-
-        }
-
         return 0;
     }

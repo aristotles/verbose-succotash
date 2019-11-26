@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/Users/samuel/GitHub/verbose-succotash/verboseClion/create.c
+stdio.h
+-
+string.h
+-
+create.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+
 /Users/samuel/GitHub/verbose-succotash/verboseClion/main.c
 stdio.h
 -
@@ -13,18 +23,16 @@ string.h
 -
 readAll.h
 /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
-
-/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.c
-stdio.h
--
-string.h
--
-readAll.h
-/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
+readPart.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+create.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
 
 /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
 stdio.h
 -
 string.h
 -
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
 

@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/create.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/create.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c">
 			<Option target="untitled"/>
 		</Unit>
@@ -85,6 +91,12 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/CMakeLists.txt">

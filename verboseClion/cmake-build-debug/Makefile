@@ -123,6 +123,33 @@ untitled/fast:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
+create.o: create.c.o
+
+.PHONY : create.o
+
+# target to build an object file
+create.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/create.c.o
+.PHONY : create.c.o
+
+create.i: create.c.i
+
+.PHONY : create.i
+
+# target to preprocess a source file
+create.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/create.c.i
+.PHONY : create.c.i
+
+create.s: create.c.s
+
+.PHONY : create.s
+
+# target to generate assembly for a file
+create.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/create.c.s
+.PHONY : create.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -177,6 +204,33 @@ readAll.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readAll.c.s
 .PHONY : readAll.c.s
 
+readPart.o: readPart.c.o
+
+.PHONY : readPart.o
+
+# target to build an object file
+readPart.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readPart.c.o
+.PHONY : readPart.c.o
+
+readPart.i: readPart.c.i
+
+.PHONY : readPart.i
+
+# target to preprocess a source file
+readPart.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readPart.c.i
+.PHONY : readPart.c.i
+
+readPart.s: readPart.c.s
+
+.PHONY : readPart.s
+
+# target to generate assembly for a file
+readPart.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readPart.c.s
+.PHONY : readPart.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... untitled"
+	@echo "... create.o"
+	@echo "... create.i"
+	@echo "... create.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... readAll.o"
 	@echo "... readAll.i"
 	@echo "... readAll.s"
+	@echo "... readPart.o"
+	@echo "... readPart.i"
+	@echo "... readPart.s"
 .PHONY : help
 
 

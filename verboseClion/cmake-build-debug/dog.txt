@@ -1,3 +1,2 @@
-1:dog1.txt
-2:dog2.txt
-3:dog3.txt
+1:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/dog1.txt
+2:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/dog2.txt
