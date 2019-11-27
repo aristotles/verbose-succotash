@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled.dir/create.c.o"
+  "CMakeFiles/untitled.dir/delete.c.o"
   "CMakeFiles/untitled.dir/main.c.o"
   "CMakeFiles/untitled.dir/readAll.c.o"
   "CMakeFiles/untitled.dir/readPart.c.o"
+  "CMakeFiles/untitled.dir/run.c.o"
   "untitled"
   "untitled.pdb"
 )

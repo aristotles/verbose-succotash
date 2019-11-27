@@ -1,3 +1,0 @@
-2:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/yod1.txt
-3:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/yod2.txt
-4:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/yod3.txt

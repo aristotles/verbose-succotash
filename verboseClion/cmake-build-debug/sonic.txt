@@ -1,2 +1,0 @@
-1:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/sonic0.txt
-:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/sonic1.txt

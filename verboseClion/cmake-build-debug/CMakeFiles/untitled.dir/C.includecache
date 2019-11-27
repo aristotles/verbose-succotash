@@ -16,7 +16,7 @@ create.h
 
 /Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
 
-/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c
+/Users/samuel/GitHub/verbose-succotash/verboseClion/delete.c
 stdio.h
 -
 string.h
@@ -27,6 +27,20 @@ readPart.h
 /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
 create.h
 /Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+run.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/run.h
+delete.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/delete.h
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/delete.h
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.c
+stdio.h
+-
+string.h
+-
+readAll.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
 
 /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
 stdio.h
@@ -34,5 +48,15 @@ stdio.h
 string.h
 -
 
+/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.c
+stdio.h
+-
+string.h
+-
+readPart.h
 /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/run.h
 

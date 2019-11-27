@@ -6,89 +6,99 @@
 #include "create.h"
 int create(char *var1, int var2, int partition){
 
-
-
+    const char *invalid_characters = " ";
+    char finalName[1024] = "";
+    char inputContents[1024];
     char thename[1024]="";
     int place=0;
+    char contents[1024] = "";
+    char finalContents[1024] = "";
+    char placeString[1024] = "";
+    char mainArray[8][150];
+    int partCount=0;
+    int arrayPlaceHolders[8]={0,0,0,0,0,0,0,0};
+    int i;
+
+    memset(mainArray[1],0,150);
+    memset(mainArray[2],0,150);
+    memset(mainArray[3],0,150);
+    memset(mainArray[4],0,150);
+    memset(mainArray[5],0,150);
+    memset(mainArray[6],0,150);
+    memset(mainArray[7],0,150);
+    memset(mainArray[0],0,150);
+
     for(int x=0; x<var2; x++)
     {
         thename[x]=*var1;
-        /*increment pointer for next element fetch*/
         var1++;
         place++;
     }
 
     thename[strlen(thename)] = 0;
-
-    const char *invalid_characters = " ";
-    char finalName[1024] = "";
-    char finalDesitination[1024] = "Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/";
     strcpy(finalName, thename);
 
     printf("\nwhat should the file say:\n");
-    char inputContents[1024];
+
     fgets(inputContents, 1024, stdin);
 
     //gets rid of question mark
     size_t length = strlen(thename);
     thename[length + 1] = '\0';
 
-    int i;
-
-
-    char contents[1024] = "";
-    char finalContents[1024] = "";
-    char placeString[1024] = "";
-
     char *contentstring = inputContents;
     char *w = contentstring;
 
+    for (i = 1; i < 1000; i++) {
 
-    for (i = 1; i < partition + 1; i++) {
-        size_t length = strlen(thename);
-
+        if(partCount==partition){
+            partCount=0;
+        }
         while (*w) {
             if (strchr(invalid_characters, *w)) {
+                mainArray[partCount][arrayPlaceHolders[partCount]]=' ';
+                arrayPlaceHolders[partCount]++;
+                partCount++;
                 w++;
                 break;
             } else {
-                size_t len = strlen(contents);
-                contents[len++] = *w; /* we overwriting the null-character with another one */
-                contents[len] = '\0';
+                mainArray[partCount][arrayPlaceHolders[partCount]]=*w;
+                arrayPlaceHolders[partCount]++;
                 w++;
 
             }
 
         }
 
-        if (i == 1) {
+    }
+    int p;
 
-            thename[length - 4] = i + '0';
-            thename[length - 3] = '.';
-            thename[length - 2] = 't';
-            thename[length - 1] = 'x';
-            thename[length - 0] = 't';
-        } else {
-            thename[length - 5] = i + '0';
-            thename[length - 4] = '.';
-            thename[length - 3] = 't';
-            thename[length - 2] = 'x';
-            thename[length - 1] = 't';
-        }
-        placeString[0] = i + '0';
-        FILE *file_pointer = fopen(thename, "w");
-        fprintf(file_pointer, contents);
-        fclose(file_pointer);
+    for (p = 1; p < partition+1; p++) {
+
+        char newNam[1024]="";
+
+        strcat(newNam,"disk");
+        placeString[0] = p + '0';
+        strcat(newNam,placeString);
+        strcat(newNam,"/");
+        strcat(newNam,thename);
+
+        FILE *file_pointer2 = fopen(newNam, "w");
+        fprintf(file_pointer2, mainArray[p-1]);
+        fclose(file_pointer2);
 
         strcat(finalContents, placeString);
-        strcat(finalContents, ":");
-        strcat(finalContents, finalDesitination);
+        strcat(finalContents, ":disk");
+        strcat(finalContents, placeString);
+        strcat(finalContents, "/");
         strcat(finalContents, thename);
         strcat(finalContents, "\n");
         memset(placeString, 0, 1024);
-        memset(contents, 0, 1024);
+
     }
+
     FILE *file_pointer = fopen(finalName, "w");
     fprintf(file_pointer, finalContents);
     fclose(file_pointer);
+
 }

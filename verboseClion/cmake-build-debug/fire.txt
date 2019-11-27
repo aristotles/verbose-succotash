@@ -1,2 +1,0 @@
-1:fire1.txt
-2:fire2.txt

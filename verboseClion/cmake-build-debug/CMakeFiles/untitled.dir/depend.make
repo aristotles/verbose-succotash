@@ -4,14 +4,30 @@
 CMakeFiles/untitled.dir/create.c.o: ../create.c
 CMakeFiles/untitled.dir/create.c.o: ../create.h
 
+CMakeFiles/untitled.dir/delete.c.o: ../create.h
+CMakeFiles/untitled.dir/delete.c.o: ../delete.c
+CMakeFiles/untitled.dir/delete.c.o: ../delete.h
+CMakeFiles/untitled.dir/delete.c.o: ../readAll.h
+CMakeFiles/untitled.dir/delete.c.o: ../readPart.h
+CMakeFiles/untitled.dir/delete.c.o: ../run.h
+
 CMakeFiles/untitled.dir/main.c.o: ../create.h
+CMakeFiles/untitled.dir/main.c.o: ../delete.h
 CMakeFiles/untitled.dir/main.c.o: ../main.c
 CMakeFiles/untitled.dir/main.c.o: ../readAll.h
 CMakeFiles/untitled.dir/main.c.o: ../readPart.h
+CMakeFiles/untitled.dir/main.c.o: ../run.h
 
 CMakeFiles/untitled.dir/readAll.c.o: ../readAll.c
 CMakeFiles/untitled.dir/readAll.c.o: ../readAll.h
 
 CMakeFiles/untitled.dir/readPart.c.o: ../readPart.c
 CMakeFiles/untitled.dir/readPart.c.o: ../readPart.h
+
+CMakeFiles/untitled.dir/run.c.o: ../create.h
+CMakeFiles/untitled.dir/run.c.o: ../delete.h
+CMakeFiles/untitled.dir/run.c.o: ../readAll.h
+CMakeFiles/untitled.dir/run.c.o: ../readPart.h
+CMakeFiles/untitled.dir/run.c.o: ../run.c
+CMakeFiles/untitled.dir/run.c.o: ../run.h
 

@@ -84,6 +84,12 @@
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/create.h">
 			<Option target="untitled"/>
 		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/delete.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/delete.h">
+			<Option target="untitled"/>
+		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c">
 			<Option target="untitled"/>
 		</Unit>
@@ -97,6 +103,12 @@
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/run.c">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/run.h">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/samuel/GitHub/verbose-succotash/verboseClion/CMakeLists.txt">

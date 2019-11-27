@@ -1,3 +1,0 @@
-1torchic1.txt
-2torchic2.txt
-3torchic3.txt

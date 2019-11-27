@@ -6,9 +6,14 @@
 #include "readPart.h"
 int readPart(char *var1, int var2, int partition){
 
-
     char thename[1024]="";
     int place=0;
+    int timetoCheck = 1;
+    int timetoMake = 0;
+    int q;
+    FILE *file;
+    char partitionFile[1024] = "";
+
     for(int x=0; x<var2; x++)
     {
         thename[x]=*var1;
@@ -19,12 +24,9 @@ int readPart(char *var1, int var2, int partition){
 
     thename[strlen(thename)] = 0;
 
-    int q;
-    FILE *file;
-    char partitionFile[1024] = "";
+
     file = fopen(thename, "r");
-    int timetoCheck = 1;
-    int timetoMake = 0;
+
     if (file) {
 
         while ((q = getc(file)) != EOF) {

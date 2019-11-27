@@ -1,0 +1,5 @@
+1:disk1/rent.txt
+2:disk2/rent.txt
+3:disk3/rent.txt
+4:disk4/rent.txt
+5:disk5/rent.txt

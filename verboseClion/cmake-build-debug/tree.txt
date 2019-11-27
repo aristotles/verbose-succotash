@@ -1,3 +1,0 @@
-1:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/tree0.txt
-2:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/tree1.txt
-3:Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/tree2.txt

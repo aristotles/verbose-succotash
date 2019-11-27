@@ -4,14 +4,30 @@
 CMakeFiles/untitled.dir/create.c.o
  /Users/samuel/GitHub/verbose-succotash/verboseClion/create.c
  /Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+CMakeFiles/untitled.dir/delete.c.o
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/delete.c
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/delete.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/run.h
 CMakeFiles/untitled.dir/main.c.o
  /Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/delete.h
  /Users/samuel/GitHub/verbose-succotash/verboseClion/main.c
  /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
  /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/run.h
 CMakeFiles/untitled.dir/readAll.c.o
  /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.c
  /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
 CMakeFiles/untitled.dir/readPart.c.o
  /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.c
  /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+CMakeFiles/untitled.dir/run.c.o
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/create.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/delete.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/run.c
+ /Users/samuel/GitHub/verbose-succotash/verboseClion/run.h

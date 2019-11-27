@@ -150,6 +150,33 @@ create.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/create.c.s
 .PHONY : create.c.s
 
+delete.o: delete.c.o
+
+.PHONY : delete.o
+
+# target to build an object file
+delete.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/delete.c.o
+.PHONY : delete.c.o
+
+delete.i: delete.c.i
+
+.PHONY : delete.i
+
+# target to preprocess a source file
+delete.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/delete.c.i
+.PHONY : delete.c.i
+
+delete.s: delete.c.s
+
+.PHONY : delete.s
+
+# target to generate assembly for a file
+delete.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/delete.c.s
+.PHONY : delete.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -231,6 +258,33 @@ readPart.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/readPart.c.s
 .PHONY : readPart.c.s
 
+run.o: run.c.o
+
+.PHONY : run.o
+
+# target to build an object file
+run.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/run.c.o
+.PHONY : run.c.o
+
+run.i: run.c.i
+
+.PHONY : run.i
+
+# target to preprocess a source file
+run.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/run.c.i
+.PHONY : run.c.i
+
+run.s: run.c.s
+
+.PHONY : run.s
+
+# target to generate assembly for a file
+run.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/run.c.s
+.PHONY : run.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -243,6 +297,9 @@ help:
 	@echo "... create.o"
 	@echo "... create.i"
 	@echo "... create.s"
+	@echo "... delete.o"
+	@echo "... delete.i"
+	@echo "... delete.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -252,6 +309,9 @@ help:
 	@echo "... readPart.o"
 	@echo "... readPart.i"
 	@echo "... readPart.s"
+	@echo "... run.o"
+	@echo "... run.i"
+	@echo "... run.s"
 .PHONY : help
 
 
