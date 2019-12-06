@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "readAll.h"
-
-int readAll(char *var1, int var2){
+#include <unistd.h>
+int readAll(char *var1, int var2,int connection){
 
     char thename[1024]="";
     int place=0;
@@ -38,7 +38,9 @@ int readAll(char *var1, int var2){
         var1++;
         place++;
     }
-    thename[strlen(thename)-1] = 0;
+    thename[strlen(thename)] = 0;
+
+
     file = fopen(thename, "r");
 
     if (file) {
@@ -84,15 +86,15 @@ int readAll(char *var1, int var2){
                     for(loopYvalue=0;loopYvalue<8;loopYvalue++){
 
                         for(int k=arrayPlaceHolders[loopYvalue];k<150;k++){
-                            if(mainArray[loopYvalue][k]==' '){
-                                mastOut[masterPlace]=mainArray[loopYvalue][k];
+                            if(mainArray[loopYvalue][k]==11){
+                                mastOut[masterPlace]=' ';
                                 masterPlace+=1;
                                 arrayPlaceHolders[loopYvalue]+=1;
                                 break;
                             }
                             else if(mainArray[loopYvalue][k]=='\0'){
                                 mastOut[masterPlace]=' ';
-                                masterPlace+=1;
+                         //       masterPlace+=1;
                                 break;
                             }
                             else{
@@ -107,8 +109,10 @@ int readAll(char *var1, int var2){
                     }
 
                 }
-                printf("%s",mastOut);
+        char sendLine[256];
 
+        snprintf(sendLine, sizeof(sendLine), mastOut);
+        write(connection, sendLine, strlen(sendLine));
                 fclose(file);
             }
         return 0;

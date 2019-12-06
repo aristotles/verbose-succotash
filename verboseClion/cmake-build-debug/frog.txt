@@ -1,0 +1,5 @@
+1:disk1/frog.txt
+2:disk2/frog.txt
+3:disk3/frog.txt
+4:disk4/frog.txt
+5:disk5/frog.txt

@@ -1,31 +1,181 @@
-#include <stdio.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <signal.h>
+#include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <pthread.h>
+#include <semaphore.h>
 #include "readAll.h"
 #include "readPart.h"
 #include "create.h"
 #include "run.h"
 #include "delete.h"
 
+#define RESOURCE_SERVER_PORT 8020 // Change this!
+#define BUF_SIZE 256
 
-int main() {
+// We make this a global so that we can refer to it in our signal handler
+int serverSocket;
 
+/*
+ We need to make sure we close the connection on signal received, otherwise we have to wait
+ for server to timeout.
+ */
+void closeConnection() {
+    printf("\nClosing Connection with file descriptor: %d \n", serverSocket);
+    close(serverSocket);
+    exit(1);
+}
+// Create a separat emethod for
 
-        while(1==1){
+void * processClientRequest(void * request) {
+    int connectionToClient = *(int *)request;
+    char receiveLine[BUF_SIZE];
+    char fistLine[BUF_SIZE];
+    char sendLine[BUF_SIZE];
+    char theBody[BUF_SIZE];
+    char allPlace=0;
+    int isCreate=0;
+    int bytesReadFromClient = 0;
+    // Read the request that the client has
+    while ( (bytesReadFromClient = read(connectionToClient, receiveLine, BUF_SIZE)) > 0) {
+        // Need to put a NULL string terminator at end
+        receiveLine[bytesReadFromClient] = 0;
 
-            run();
-            printf("anything else?(y/n)\n");
-            char inputAction[40];
-            fgets(inputAction, 40, stdin);
-
-            if(inputAction[0]=='y'){
-            }
-            else{
-                break;
+        // Show what client sent
+        printf("Received: %s\n", receiveLine);
+        if(isCreate==0) {
+            if (receiveLine[0] == 'c') {
+                for(int x=0; x<strlen(receiveLine); x++)
+                {
+                    fistLine[x]=receiveLine[x];
+                }
+                isCreate=1;
+            } else {
+                run(receiveLine, strlen(receiveLine), connectionToClient,0,0);
+                close(connectionToClient);
             }
         }
+        else{
 
+            if(receiveLine[0]=='9'){
+                run(fistLine, strlen(fistLine), connectionToClient,theBody,strlen(theBody));
+                close(connectionToClient);
+            }
+            for(int x=0; x<strlen(receiveLine); x++)
+            {
+                theBody[allPlace]=receiveLine[x];
+                allPlace++;
+            }
+            theBody[strlen(theBody)] = 0;
 
+        }
 
-        return 0;
+        // Print text out to buffer, and then write it to client (connfd)
+      //  snprintf(sendLine, sizeof(sendLine), "please enter a create,read or delete command");
+
+        printf("Sending %s\n", sendLine);
+      //  write(connectionToClient, sendLine, strlen(sendLine));
+
+        // Zero out the receive line so we do not get artifacts from before
+        bzero(&receiveLine, sizeof(receiveLine));
 
     }
+}
+
+int main(int argc, char *argv[]) {
+    int connectionToClient, bytesReadFromClient;
+
+    // Create a server socket
+    serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+    struct sockaddr_in serverAddress;
+    bzero(&serverAddress, sizeof(serverAddress));
+    serverAddress.sin_family      = AF_INET;
+
+
+    // INADDR_ANY means we will listen to any address
+    // htonl and htons converts address/ports to network formats
+
+    serverAddress.sin_addr.s_addr = htonl(INADDR_ANY);
+    serverAddress.sin_port        = htons(RESOURCE_SERVER_PORT);
+
+    // Bind to port
+    if (bind(serverSocket, (struct sockaddr *) &serverAddress, sizeof(serverAddress)) == -1) {
+        printf("Unable to bind to port just yet, perhaps the connection has to be timed out\n");
+        exit(-1);
+    }
+
+    // Before we listen, register for Ctrl+C being sent so we can close our connection
+    struct sigaction sigIntHandler;
+    sigIntHandler.sa_handler = closeConnection;
+    sigIntHandler.sa_flags = 0;
+
+    sigaction(SIGINT, &sigIntHandler, NULL);
+
+    // Listen and queue up to 10 connections
+    listen(serverSocket, 10);
+
+    while (1) {
+        /*
+         Accept connection (this is blocking)
+         2nd parameter you can specify connection
+         3rd parameter is for socket length
+         */
+        connectionToClient = accept(serverSocket, (struct sockaddr *) NULL, NULL);
+
+        // Kick off a thread to process request
+        pthread_t someThread;
+        pthread_create(&someThread, NULL, processClientRequest, (void *)&connectionToClient);
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//#include <stdio.h>
+//#include <string.h>
+//#include "readAll.h"
+//#include "readPart.h"
+//#include "create.h"
+//#include "run.h"
+//#include "delete.h"
+//
+//
+//int main() {
+//
+//
+//        while(1==1){
+//
+//            run();
+//            printf("anything else?(y/n)\n");
+//            char inputAction[40];
+//            fgets(inputAction, 40, stdin);
+//
+//            if(inputAction[0]=='y'){
+//            }
+//            else{
+//                break;
+//            }
+//        }
+//
+//
+//
+//        return 0;
+//
+//    }

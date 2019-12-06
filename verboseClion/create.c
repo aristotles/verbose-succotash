@@ -4,14 +4,16 @@
 #include <stdio.h>
 #include <string.h>
 #include "create.h"
-int create(char *var1, int var2, int partition){
+int create(char *var1, int var2, int partition,char *fullArray, int fullArraySize,int bodyStart){
 
-    const char *invalid_characters = " ";
+    const char *invalid_characters = "\n";
     char finalName[1024] = "";
-    char inputContents[1024];
+    char inputContents[1024]="";
+    char body[1024]="";
     char thename[1024]="";
     int place=0;
     char contents[1024] = "";
+
     char finalContents[1024] = "";
     char placeString[1024] = "";
     char mainArray[8][150];
@@ -32,15 +34,32 @@ int create(char *var1, int var2, int partition){
     {
         thename[x]=*var1;
         var1++;
-        place++;
+     //   place++;
     }
 
     thename[strlen(thename)] = 0;
+
+    for(int x=0; x<fullArraySize; x++)
+    {
+       inputContents[x]=*fullArray;
+        fullArray++;
+       // place++;
+    }
+    inputContents[strlen(inputContents)] = 0;
+//
+//    for(int x=bodyStart; x<fullArraySize; x++)
+//    {
+//        body[place]=inputContents[x];
+//        place++;
+//    }
+
+
+
     strcpy(finalName, thename);
 
-    printf("\nwhat should the file say:\n");
+ //   printf("\nwhat should the file say:\n");
 
-    fgets(inputContents, 1024, stdin);
+   // fgets(inputContents, 1024, stdin);
 
     //gets rid of question mark
     size_t length = strlen(thename);
@@ -56,7 +75,7 @@ int create(char *var1, int var2, int partition){
         }
         while (*w) {
             if (strchr(invalid_characters, *w)) {
-                mainArray[partCount][arrayPlaceHolders[partCount]]=' ';
+                mainArray[partCount][arrayPlaceHolders[partCount]]=11;
                 arrayPlaceHolders[partCount]++;
                 partCount++;
                 w++;
@@ -65,7 +84,6 @@ int create(char *var1, int var2, int partition){
                 mainArray[partCount][arrayPlaceHolders[partCount]]=*w;
                 arrayPlaceHolders[partCount]++;
                 w++;
-
             }
 
         }

@@ -4,5 +4,5 @@
 
 #ifndef UNTITLED_READPART_H
 #define UNTITLED_READPART_H
-int readPart(char *var1, int var2, int partition);
+int readPart(char *var1, int var2, int partition,int connection);
 #endif //UNTITLED_READPART_H

@@ -24,7 +24,8 @@ int deleteAll(char *var1, int var2){
         place++;
     }
 
-    thename[strlen(thename)-1] = 0;
+    thename[strlen(thename)] = 0;
+
     file = fopen(thename, "r");
 
     if (file) {
