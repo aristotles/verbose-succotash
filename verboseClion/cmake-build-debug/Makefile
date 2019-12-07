@@ -177,6 +177,33 @@ delete.c.s:
 	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/delete.c.s
 .PHONY : delete.c.s
 
+handleTheRequest.o: handleTheRequest.c.o
+
+.PHONY : handleTheRequest.o
+
+# target to build an object file
+handleTheRequest.c.o:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/handleTheRequest.c.o
+.PHONY : handleTheRequest.c.o
+
+handleTheRequest.i: handleTheRequest.c.i
+
+.PHONY : handleTheRequest.i
+
+# target to preprocess a source file
+handleTheRequest.c.i:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/handleTheRequest.c.i
+.PHONY : handleTheRequest.c.i
+
+handleTheRequest.s: handleTheRequest.c.s
+
+.PHONY : handleTheRequest.s
+
+# target to generate assembly for a file
+handleTheRequest.c.s:
+	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/handleTheRequest.c.s
+.PHONY : handleTheRequest.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -300,6 +327,9 @@ help:
 	@echo "... delete.o"
 	@echo "... delete.i"
 	@echo "... delete.s"
+	@echo "... handleTheRequest.o"
+	@echo "... handleTheRequest.i"
+	@echo "... handleTheRequest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

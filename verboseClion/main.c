@@ -13,7 +13,7 @@
 #include "create.h"
 #include "run.h"
 #include "delete.h"
-
+#include "handleTheRequest.h"
 #define RESOURCE_SERVER_PORT 8020 // Change this!
 #define BUF_SIZE 256
 
@@ -31,60 +31,7 @@ void closeConnection() {
 }
 // Create a separat emethod for
 
-void * processClientRequest(void * request) {
-    int connectionToClient = *(int *)request;
-    char receiveLine[BUF_SIZE];
-    char fistLine[BUF_SIZE];
-    char sendLine[BUF_SIZE];
-    char theBody[BUF_SIZE];
-    char allPlace=0;
-    int isCreate=0;
-    int bytesReadFromClient = 0;
-    // Read the request that the client has
-    while ( (bytesReadFromClient = read(connectionToClient, receiveLine, BUF_SIZE)) > 0) {
-        // Need to put a NULL string terminator at end
-        receiveLine[bytesReadFromClient] = 0;
 
-        // Show what client sent
-        printf("Received: %s\n", receiveLine);
-        if(isCreate==0) {
-            if (receiveLine[0] == 'c') {
-                for(int x=0; x<strlen(receiveLine); x++)
-                {
-                    fistLine[x]=receiveLine[x];
-                }
-                isCreate=1;
-            } else {
-                run(receiveLine, strlen(receiveLine), connectionToClient,0,0);
-                close(connectionToClient);
-            }
-        }
-        else{
-
-            if(receiveLine[0]=='9'){
-                run(fistLine, strlen(fistLine), connectionToClient,theBody,strlen(theBody));
-                close(connectionToClient);
-            }
-            for(int x=0; x<strlen(receiveLine); x++)
-            {
-                theBody[allPlace]=receiveLine[x];
-                allPlace++;
-            }
-            theBody[strlen(theBody)] = 0;
-
-        }
-
-        // Print text out to buffer, and then write it to client (connfd)
-      //  snprintf(sendLine, sizeof(sendLine), "please enter a create,read or delete command");
-
-        printf("Sending %s\n", sendLine);
-      //  write(connectionToClient, sendLine, strlen(sendLine));
-
-        // Zero out the receive line so we do not get artifacts from before
-        bzero(&receiveLine, sizeof(receiveLine));
-
-    }
-}
 
 int main(int argc, char *argv[]) {
     int connectionToClient, bytesReadFromClient;
@@ -128,9 +75,10 @@ int main(int argc, char *argv[]) {
 
         // Kick off a thread to process request
         pthread_t someThread;
-        pthread_create(&someThread, NULL, processClientRequest, (void *)&connectionToClient);
-
+        pthread_create(&someThread, NULL, handleTheRequest, (void *)&connectionToClient);
+       // return 0;
     }
+    return 0;
 }
 
 

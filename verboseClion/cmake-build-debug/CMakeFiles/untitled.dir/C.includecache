@@ -6,15 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.c
-stdio.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/handleTheRequest.c
+sys/socket.h
+-
+netinet/in.h
+-
+signal.h
+-
+stdlib.h
 -
 string.h
 -
-readPart.h
-/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+stdio.h
+-
 unistd.h
 -
+sys/types.h
+-
+pthread.h
+-
+semaphore.h
+-
+unistd.h
+-
+run.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/run.h
+handleTheRequest.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/handleTheRequest.h
 
-/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.h
+/Users/samuel/GitHub/verbose-succotash/verboseClion/handleTheRequest.h
+
+/Users/samuel/GitHub/verbose-succotash/verboseClion/run.h
 

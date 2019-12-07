@@ -11,8 +11,13 @@ CMakeFiles/untitled.dir/delete.c.o: ../readAll.h
 CMakeFiles/untitled.dir/delete.c.o: ../readPart.h
 CMakeFiles/untitled.dir/delete.c.o: ../run.h
 
+CMakeFiles/untitled.dir/handleTheRequest.c.o: ../handleTheRequest.c
+CMakeFiles/untitled.dir/handleTheRequest.c.o: ../handleTheRequest.h
+CMakeFiles/untitled.dir/handleTheRequest.c.o: ../run.h
+
 CMakeFiles/untitled.dir/main.c.o: ../create.h
 CMakeFiles/untitled.dir/main.c.o: ../delete.h
+CMakeFiles/untitled.dir/main.c.o: ../handleTheRequest.h
 CMakeFiles/untitled.dir/main.c.o: ../main.c
 CMakeFiles/untitled.dir/main.c.o: ../readAll.h
 CMakeFiles/untitled.dir/main.c.o: ../readPart.h

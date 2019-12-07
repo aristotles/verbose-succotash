@@ -1,0 +1,4 @@
+1:disk1/mom.txt
+2:disk2/mom.txt
+3:disk3/mom.txt
+4:disk4/mom.txt

@@ -1,2 +1,0 @@
-1:disk1/blue.txt
-2:disk2/blue.txt

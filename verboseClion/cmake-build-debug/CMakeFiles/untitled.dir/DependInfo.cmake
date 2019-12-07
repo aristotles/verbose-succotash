@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/samuel/GitHub/verbose-succotash/verboseClion/create.c" "/Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/CMakeFiles/untitled.dir/create.c.o"
   "/Users/samuel/GitHub/verbose-succotash/verboseClion/delete.c" "/Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/CMakeFiles/untitled.dir/delete.c.o"
+  "/Users/samuel/GitHub/verbose-succotash/verboseClion/handleTheRequest.c" "/Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/CMakeFiles/untitled.dir/handleTheRequest.c.o"
   "/Users/samuel/GitHub/verbose-succotash/verboseClion/main.c" "/Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/CMakeFiles/untitled.dir/main.c.o"
   "/Users/samuel/GitHub/verbose-succotash/verboseClion/readAll.c" "/Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/CMakeFiles/untitled.dir/readAll.c.o"
   "/Users/samuel/GitHub/verbose-succotash/verboseClion/readPart.c" "/Users/samuel/GitHub/verbose-succotash/verboseClion/cmake-build-debug/CMakeFiles/untitled.dir/readPart.c.o"
