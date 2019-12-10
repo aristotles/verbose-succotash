@@ -1,0 +1,4 @@
+1:disk1/wailord.txt
+2:disk2/wailord.txt
+3:disk3/wailord.txt
+4:disk4/wailord.txt

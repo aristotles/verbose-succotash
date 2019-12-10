@@ -22,6 +22,7 @@ void * handleTheRequest(void * request) {
     char sendLine[BUF_SIZE];
     char theBody[BUF_SIZE];
     char allPlace=0;
+    int dereferencedNullPointer=9;
     int isCreate=0;
     int bytesReadFromClient = 0;
     // Read the request that the client has
